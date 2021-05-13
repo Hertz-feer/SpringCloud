@@ -1,0 +1,16 @@
+server:
+  port: 6112
+
+spring:
+  application:
+    name: eureka-colony-server-6112
+
+eureka:
+  instance:
+    hostname: eureka6112
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka6111:6111/eureka
+

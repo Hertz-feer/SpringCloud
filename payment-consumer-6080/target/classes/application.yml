@@ -1,0 +1,16 @@
+server:
+  port: 6080
+
+spring:
+  application:
+    name: payment-consumer-server-6080
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka6112:6112/eureka,http://eureka6111:6111/eureka
+  instance:
+    instance-id: payment-consumer-6080
+    prefer-ip-address: true

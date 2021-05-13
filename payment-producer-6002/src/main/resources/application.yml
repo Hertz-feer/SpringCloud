@@ -1,0 +1,16 @@
+server:
+  port: 6002
+
+spring:
+  application:
+    name: payment-producer-server
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka6112:6112/eureka,http://eureka6111:6111/eureka
+  instance:
+    instance-id: payment-producer-6002
+    prefer-ip-address: true
