@@ -51,7 +51,7 @@ public class PaymentController {
     @RequestMapping("list")
     public CommonResult<List<Payment>> listPayments() {
         List<Payment> payments = service.listPayments();
-        return CommonResult.create(200, "来自" + serverPort + payments.size(), payments);
+        return CommonResult.create(200, "来自" + serverPort + "   数量：" + payments.size(), payments);
     }
 
     @RequestMapping("discovery")
