@@ -9,4 +9,6 @@ public interface PaymentService {
     String sendOK(Integer id);
 
     String sendError(Integer id);
+
+    String sendErrorById(Integer id);
 }

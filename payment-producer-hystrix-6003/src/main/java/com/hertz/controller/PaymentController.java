@@ -31,4 +31,9 @@ public class PaymentController {
     public String sendError(@PathVariable Integer id) {
         return service.sendError(id);
     }
+
+    @RequestMapping("send/error/by/{id}")
+    public String sendErrorById(@PathVariable Integer id) {
+        return service.sendErrorById(id);
+    }
 }

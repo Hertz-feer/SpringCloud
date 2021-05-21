@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="payment-producer-6002" />
         <module name="payment-consumer-feign-hystrix-6084" />
+        <module name="consumer-hystrix-dashboard-6201" />
         <module name="payment-producer-hystrix-6003" />
         <module name="eureka-colony-service-6112" />
         <module name="payment-consumer-6080" />
