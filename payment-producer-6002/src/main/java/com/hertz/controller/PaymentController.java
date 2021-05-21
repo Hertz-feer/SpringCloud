@@ -66,4 +66,15 @@ public class PaymentController {
 
         return this.discoveryClient;
     }
+
+    @RequestMapping("time/out/list")
+    public CommonResult<List<Payment>> limeOutLstPayments() {
+        List<Payment> payments = service.listPayments();
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return CommonResult.create(200, "来自" + serverPort + "   数量：" + payments.size(), payments);
+    }
 }

@@ -7,12 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="payment-producer-6002" />
+        <module name="payment-consumer-feign-hystrix-6084" />
+        <module name="payment-producer-hystrix-6003" />
         <module name="eureka-colony-service-6112" />
         <module name="payment-consumer-6080" />
         <module name="eureka-colony-service-6111" />
-        <module name="payment-producer-6002" />
         <module name="payment-producer-6001" />
         <module name="commons" />
+        <module name="payment-consumer-feign-6081" />
       </profile>
     </annotationProcessing>
   </component>

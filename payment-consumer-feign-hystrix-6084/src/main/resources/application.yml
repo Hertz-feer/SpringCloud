@@ -1,0 +1,28 @@
+server:
+  port: 6084
+
+spring:
+  application:
+    name: payment-consumer-feign-hystrix-6084
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka6112:6112/eureka,http://eureka6111:6111/eureka
+  instance:
+    instance-id: payment-consumer-feign-hystrix-6084
+    prefer-ip-address: true
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    com.hertz.service.PaymentService: debug
+
+feign:
+  hystrix:
+    enabled: true
