@@ -1,0 +1,33 @@
+server:
+  port: 6201
+
+spring:
+  application:
+    name: gateway-6201
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: payment-producer-1
+          #          uri: http://localhost:6001
+          uri: lb://PAYMENT-PRODUCER-SERVER
+          predicates:
+            - Path=/payment/get/**
+
+        - id: payment-producer-2
+            #          uri: http://localhost:6001
+            uri: lb://PAYMENT-PRODUCER-SERVER
+          predicates:
+            - Path=/payment/list
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka6112:6112/eureka,http://eureka6111:6111/eureka
+  instance:
+    instance-id: gateway-6201
+    prefer-ip-address: true

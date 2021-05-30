@@ -13,6 +13,7 @@
         <module name="payment-producer-hystrix-6003" />
         <module name="eureka-colony-service-6112" />
         <module name="payment-consumer-6080" />
+        <module name="gateway-6201" />
         <module name="eureka-colony-service-6111" />
         <module name="payment-producer-6001" />
         <module name="commons" />

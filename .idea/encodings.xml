@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/eureka-colony-service-6111/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-colony-service-6112/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-colony-service-6112/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-6201/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-6201/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-consumer-6080/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-consumer-6080/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-consumer-feign-6081/src/main/java" charset="UTF-8" />
