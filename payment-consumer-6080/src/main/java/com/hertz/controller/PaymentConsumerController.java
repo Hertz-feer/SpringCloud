@@ -2,6 +2,8 @@ package com.hertz.controller;
 
 import com.hertz.entities.CommonResult;
 import com.hertz.entities.Payment;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,10 +20,13 @@ public class PaymentConsumerController {
 
     private final RestTemplate restTemplate;
 
+    private final RedissonClient redissonClient;
+
     private static final String PAYMENT_PRODUCER_URL = "http://PAYMENT-PRODUCER-SERVER/payment/";
 
-    public PaymentConsumerController(RestTemplate restTemplate) {
+    public PaymentConsumerController(RestTemplate restTemplate, RedissonClient redissonClient) {
         this.restTemplate = restTemplate;
+        this.redissonClient = redissonClient;
     }
 
     @RequestMapping("save")
@@ -50,6 +55,20 @@ public class PaymentConsumerController {
         } else {
             return CommonResult.create(400, "调用失败");
         }
+    }
+
+    @RequestMapping("rlock")
+    public CommonResult<String> testRedissonClient() {
+        RLock rLock = redissonClient.getLock("testRedis");
+        rLock.lock();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            rLock.unlock();
+        }
+        return CommonResult.create(200, "调用成功");
     }
 
 }

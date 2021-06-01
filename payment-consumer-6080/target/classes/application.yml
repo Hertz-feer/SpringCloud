@@ -14,3 +14,4 @@ eureka:
   instance:
     instance-id: payment-consumer-6080
     prefer-ip-address: true
+
