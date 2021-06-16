@@ -11,6 +11,7 @@ import java.util.UUID;
 /**
  * @author Hertz
  * @date 2021/5/10 15:33
+ * 这是一个虚拟的Dao 并没有连接数据库
  */
 @Repository
 public class PaymentDao {
