@@ -1,6 +1,5 @@
 ### Example user template template
 ### Example user template
-*/target/*
 # IntelliJ project files
 .idea
 *.iml
@@ -9,7 +8,7 @@ gen
 ### Java template
 # Compiled class file
 *.class
-
+*/target/*
 # Log file
 *.log
 
